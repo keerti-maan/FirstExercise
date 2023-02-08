@@ -27,7 +27,7 @@ resource "azurerm_storage_account" "firststorage" {
   account_replication_type = "GRS"
 
   tags = {
-    environment = "first-sa"
+    name = "first-sa"
   }
 }
 
@@ -41,6 +41,6 @@ resource "azurerm_storage_account" "secondstorage" {
     azurerm_storage_account.firststorage
   ]
   tags = {
-    environment = "second-sa"
+    name = "second-sa"
   }
 }
